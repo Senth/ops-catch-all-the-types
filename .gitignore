@@ -1,0 +1,6 @@
+.vscode
+src/config.*.ts
+node_modules
+coverage
+build
+dist
