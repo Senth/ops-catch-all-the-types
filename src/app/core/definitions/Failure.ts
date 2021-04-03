@@ -28,6 +28,8 @@ export namespace Failure {
   }
 
   export enum Types {
-    undefined = 'undefined',
+    nameIsEmpty = 'nameIsEmpty',
+    functionIsDuplicate = 'functionIsDuplicate',
+    animalsInvalidOrder = 'animalsInvalidOrder',
   }
 }

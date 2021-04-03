@@ -4,20 +4,22 @@ import { Entity } from './Entity'
 import { FunctionType } from './FunctionType'
 
 export interface PersonData {
+  readonly id?: string
   readonly name: string
   readonly saviorBig: FunctionType
   readonly saviorBalanced: FunctionType
   readonly animals: Animals[]
 }
 
-export class Person extends Entity implements PersonData {
+export class Person implements Entity, PersonData {
+  readonly id?: string
   readonly name: string
   readonly saviorBig: FunctionType
   readonly saviorBalanced: FunctionType
   readonly animals: Animals[]
 
   constructor(data: PersonData) {
-    super()
+    this.id = data.id
     this.name = data.name
     this.saviorBig = data.saviorBig
     this.saviorBalanced = data.saviorBalanced
@@ -25,7 +27,11 @@ export class Person extends Entity implements PersonData {
   }
 
   validate(): Failure.Info[] {
-    const errors = super.validate()
+    const errors: Failure.Info[] = []
+
+    if (this.name.length == 0) {
+      errors.push({ type: Failure.Types.nameIsEmpty })
+    }
 
     return errors
   }
