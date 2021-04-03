@@ -30,6 +30,9 @@ export namespace Failure {
   export enum Types {
     nameIsEmpty = 'nameIsEmpty',
     functionIsDuplicate = 'functionIsDuplicate',
-    animalsInvalidOrder = 'animalsInvalidOrder',
+    animalsNotFour = 'animalsNotFour',
+    animalsInvalidFirstAnimal = 'animalsInvalidFirstAnimal',
+    animalsInvalidSecondAnimal = 'animalsInvalidSecondAnimal',
+    animalsIsDuplicate = 'animalsIsDuplicate',
   }
 }

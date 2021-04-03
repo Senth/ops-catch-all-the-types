@@ -1,6 +1,6 @@
 export enum Function {
   feeling = 'feeling',
-  ntuition = 'intuition',
+  intuition = 'intuition',
   sensory = 'sensory',
   thinking = 'thinking',
 }
