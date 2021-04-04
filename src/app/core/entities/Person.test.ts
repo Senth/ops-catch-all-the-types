@@ -30,8 +30,8 @@ describe('Person.validate()', () => {
     test('error when animals is not of length 4 ', () => {
       const test = new Person({ ...validPerson, animals: [] })
       const expected: Failure.Info[] = [{ type: Failure.Types.animalsNotFour }]
-      const result = test.validate()
 
+      const result = test.validate()
       expect(result).toEqual(expected)
     })
 

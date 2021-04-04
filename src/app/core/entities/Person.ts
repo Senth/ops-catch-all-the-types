@@ -1,4 +1,5 @@
 import { Failure } from '../definitions/Failure'
+import { ImmutableArray } from '../definitions/Immutable'
 import { Animals } from './Animals'
 import { Direction } from './Direction'
 import { Entity } from './Entity'
@@ -10,7 +11,7 @@ export interface PersonData {
   readonly name: string
   readonly saviorBig: FunctionType
   readonly saviorBalanced: FunctionType
-  readonly animals: Animals[]
+  readonly animals: ImmutableArray<Animals>
 }
 
 export class Person implements Entity, PersonData {
@@ -18,7 +19,7 @@ export class Person implements Entity, PersonData {
   readonly name: string
   readonly saviorBig: FunctionType
   readonly saviorBalanced: FunctionType
-  readonly animals: Animals[]
+  readonly animals: ImmutableArray<Animals>
 
   constructor(data: PersonData) {
     this.id = data.id
