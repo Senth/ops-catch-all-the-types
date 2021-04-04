@@ -28,6 +28,9 @@ export namespace Failure {
   }
 
   export enum Types {
+    personDoesNotExist = 'personDoesNotExist',
+    idIsNotSet = 'idIsNotSet',
+    idIsAlreadySet = 'idIsAlreadySet',
     nameIsEmpty = 'nameIsEmpty',
     functionIsDuplicate = 'functionIsDuplicate',
     animalsNotFour = 'animalsNotFour',
